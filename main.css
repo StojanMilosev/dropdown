@@ -1,3 +1,6 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
 *,body{
     margin: 0;
     padding: 0;
@@ -9,9 +12,10 @@
     padding: 50px;
 }
 .dropdown{
-    background-color:  #aaa;
+    background-color:  #777;
     color: #fff;
     height: 41px;
+    border-radius: 5px;
 }
 .dropdown ul{
     list-style-type: none;
@@ -20,12 +24,13 @@
     display: block;
     float: left;
     padding: 0 5px;
+    transition: all 200ms ease-in-out;
 }
 .drop p {
     padding: 10px;
 }
 .drop p:hover{
-    background-color: #000;
+    background-color: #444;
     cursor: pointer;
 }
 .dropdown-content{
@@ -34,20 +39,31 @@
 
 }
 .dropdown-content li{
-        padding: 10px;
-        text-align: center;
+    padding: 10px;
+    text-align: center;
+    transition: all 200ms ease-in-out;
+
 }
 .dropdown-content a{
     text-decoration: none;
     color: #000;
 }
 .dropdown-content li:hover{
-    background: #FFF;
-    
+    background: #555;
+    border-radius: 3px;
 }
 .dropdown-content a:hover{
     text-decoration: underline;
+
+    color: #fff;
 }
 .show{
     display: block;
+}
+
+/* menjanje css pravila u odnosu na veličinu korišćenog uređaja */
+@media only screen and (max-width: 900px) {
+    .container {
+        width:100%;
+    }
 }
